@@ -24,7 +24,7 @@ namespace ventas
         {
             SqlConnection  con = new SqlConnection("Server=tcp:itt.database.windows.net,1433;Initial Catalog=tiendita;Persist Security Info=False;" +
                 "User ID=Orlando;Password=Bejeweled2012;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
-            string query = string.Format("select * from Usuario where Nombre = '{0}' and Password = '{1}'",txtusuario.Text,txtcontrasena.Text);
+            string query = string.Format("select * from Usuario where Nombre = '{0}' and Password = '{1}'",txtusuario.Text,txtpwd.Text);
             SqlCommand cmd = new SqlCommand(query,con);
             SqlDataReader reader;
             con.Open();
@@ -52,6 +52,10 @@ namespace ventas
                         this.Hide();
                         break;
                 }
+            }
+            else
+            {
+                MessageBox.Show("Usuario y/o contrasena incorrecta");
             }
         }
 

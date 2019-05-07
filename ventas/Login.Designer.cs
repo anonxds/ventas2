@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.txtusuario = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.txtcontrasena = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btningresar = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.txtpwd = new System.Windows.Forms.TextBox();
+            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             ((System.ComponentModel.ISupportInitialize)(this.btningresar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,31 +50,11 @@
             this.txtusuario.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtusuario.LineThickness = 3;
             this.txtusuario.Location = new System.Drawing.Point(122, 55);
-            this.txtusuario.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtusuario.Margin = new System.Windows.Forms.Padding(6);
             this.txtusuario.Name = "txtusuario";
             this.txtusuario.Size = new System.Drawing.Size(206, 55);
             this.txtusuario.TabIndex = 0;
             this.txtusuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // txtcontrasena
-            // 
-            this.txtcontrasena.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtcontrasena.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtcontrasena.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtcontrasena.HintForeColor = System.Drawing.Color.Empty;
-            this.txtcontrasena.HintText = "Contrasena";
-            this.txtcontrasena.isPassword = false;
-            this.txtcontrasena.LineFocusedColor = System.Drawing.Color.Blue;
-            this.txtcontrasena.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtcontrasena.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.txtcontrasena.LineThickness = 3;
-            this.txtcontrasena.Location = new System.Drawing.Point(122, 119);
-            this.txtcontrasena.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.txtcontrasena.Name = "txtcontrasena";
-            this.txtcontrasena.Size = new System.Drawing.Size(206, 61);
-            this.txtcontrasena.TabIndex = 1;
-            this.txtcontrasena.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtcontrasena.OnValueChanged += new System.EventHandler(this.txtcontrasena_OnValueChanged);
             // 
             // bunifuCustomLabel1
             // 
@@ -107,15 +88,34 @@
             this.bunifuCustomLabel3.TabIndex = 5;
             this.bunifuCustomLabel3.Text = "Acceder";
             // 
+            // txtpwd
+            // 
+            this.txtpwd.Location = new System.Drawing.Point(122, 140);
+            this.txtpwd.Multiline = true;
+            this.txtpwd.Name = "txtpwd";
+            this.txtpwd.PasswordChar = '*';
+            this.txtpwd.Size = new System.Drawing.Size(206, 43);
+            this.txtpwd.TabIndex = 6;
+            // 
+            // bunifuCustomLabel2
+            // 
+            this.bunifuCustomLabel2.AutoSize = true;
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(23, 146);
+            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(92, 20);
+            this.bunifuCustomLabel2.TabIndex = 7;
+            this.bunifuCustomLabel2.Text = "Contrasena";
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(447, 206);
+            this.Controls.Add(this.bunifuCustomLabel2);
+            this.Controls.Add(this.txtpwd);
             this.Controls.Add(this.bunifuCustomLabel3);
             this.Controls.Add(this.btningresar);
             this.Controls.Add(this.bunifuCustomLabel1);
-            this.Controls.Add(this.txtcontrasena);
             this.Controls.Add(this.txtusuario);
             this.MaximizeBox = false;
             this.Name = "Login";
@@ -132,9 +132,10 @@
         #endregion
 
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtusuario;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtcontrasena;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private Bunifu.Framework.UI.BunifuImageButton btningresar;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
+        private System.Windows.Forms.TextBox txtpwd;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
     }
 }
